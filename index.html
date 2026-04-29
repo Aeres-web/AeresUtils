@@ -6,12 +6,11 @@
 <title>AERES UTILITY</title>
 
 <style>
-/* ===== GLOBAL ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
@@ -21,48 +20,43 @@ body {
   align-items: center;
   background: radial-gradient(circle at top, #1a1a2e, #0f0f1a);
   color: white;
-  overflow: hidden;
 }
 
-/* ===== CONTAINER ===== */
 .container {
   text-align: center;
   padding: 40px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  background: rgba(255,255,255,0.05);
   backdrop-filter: blur(12px);
-  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+  box-shadow: 0 0 35px rgba(0,0,0,0.6);
   width: 90%;
   max-width: 500px;
 }
 
-/* ===== TITLE ===== */
 h1 {
   font-size: 2.5rem;
-  letter-spacing: 4px;
   margin-bottom: 10px;
   background: linear-gradient(90deg, #00ffe7, #7a5cff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: 3px;
 }
 
-/* ===== SUBTEXT ===== */
 p {
   opacity: 0.7;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
-/* ===== BUTTON ===== */
 button {
   padding: 15px 25px;
-  font-size: 1rem;
   border: none;
   border-radius: 12px;
   cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
   background: linear-gradient(135deg, #7a5cff, #00ffe7);
   color: black;
-  font-weight: bold;
-  transition: 0.3s ease;
+  transition: 0.25s ease;
   box-shadow: 0 0 15px rgba(122, 92, 255, 0.4);
 }
 
@@ -74,42 +68,22 @@ button:hover {
 button:active {
   transform: scale(0.95);
 }
-
-/* ===== FOOTER TEXT ===== */
-.small {
-  margin-top: 20px;
-  font-size: 0.8rem;
-  opacity: 0.5;
-}
 </style>
-
 </head>
+
 <body>
 
 <div class="container">
   <h1>AERES UTILITY</h1>
-  <p>A sleek utility hub (totally not doing anything yet 👀)</p>
+  <p>Download your utility package</p>
 
-  <button onclick="uselessAction()">Useless Button</button>
-
-  <div class="small" id="status">Status: idle</div>
+  <button onclick="downloadFile()">Download</button>
 </div>
 
 <script>
-function uselessAction() {
-  const status = document.getElementById("status");
-
-  const messages = [
-    "Nothing happened.",
-    "Still nothing.",
-    "Why are you clicking this?",
-    "Ok fine... it's still useless.",
-    "You unlocked: absolutely nothing.",
-    "AERES is judging you."
-  ];
-
-  const random = messages[Math.floor(Math.random() * messages.length)];
-  status.innerText = "Status: " + random;
+function downloadFile() {
+  window.location.href =
+    "https://raw.githubusercontent.com/Aeres-web/AeresUtils-dwd/main/AERESUTILS-compressed.zip";
 }
 </script>
 
